@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #717e8b;
+    --secondary-color: #369ee3;
+    --accent-color: #e7d33c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* 样本卡片样式 */
+.rock-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.rock-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rock-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.rock-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+}
+
+/* 光谱图表 */
+#spectrum-chart {
+    min-height: 400px;
+}
+
+/* 分页样式 */
+.pagination .page-link {
+    color: var(--primary-color);
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* 对比列表 */
+.compare-item {
+    padding: 5px;
+    margin: 2px 0;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compare-item button {
+    padding: 0 5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .rock-card {
+        margin-bottom: 20px;
+    }
+    
+    .col-lg-3, .col-lg-9 {
+        padding: 0 15px;
+    }
+}
+
+/* 加载动画 */
+.spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: text-bottom;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+}
+
+@keyframes spinner-border {
+    to { transform: rotate(360deg); }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* 管理员按钮样式 */
+.admin-btn {
+    margin: 2px;
+}
+
+.image-preview-img {
+    max-height: 100px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
