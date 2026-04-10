@@ -1,0 +1,7 @@
+node_modules/
+images/rocks/*
+spectra/*
+!images/rocks/.gitkeep
+!spectra/.gitkeep
+data/rocks.json
+.env
