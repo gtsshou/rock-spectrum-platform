@@ -285,9 +285,15 @@ app.delete('/api/rocks/:id', isAdmin, (req, res) => {
   }
 });
 
-// 启动服务器
-app.listen(PORT, () => {
-  console.log(`服务器运行在 http://localhost:${PORT}`);
-  console.log('管理员账号: admin / admin123');
-  console.log('游客账号: guest / guest');
+// 替换原来的 app.listen(PORT, ...)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`服务器运行在 http://0.0.0.0:${PORT}`);
 });
+
+// 启动服务器
+//app.listen(PORT, () => {
+//  console.log(`服务器运行在 http://localhost:${PORT}`);
+//  console.log('管理员账号: admin / admin123');
+//  console.log('游客账号: guest / guest');
+//});
