@@ -32,11 +32,21 @@ if (!fs.existsSync(ROCKS_FILE)) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+//app.use(session({
+//  secret: 'rock-spectrum-secret-key',
+//  resave: false,
+//  saveUninitialized: false,
+//  cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // 24小时
+//}));
+
 app.use(session({
   secret: 'rock-spectrum-secret-key',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // 24小时
+  cookie: { 
+    secure: process.env.NODE_ENV === 'production', // 生产环境需要 HTTPS
+    maxAge: 24 * 60 * 60 * 1000 
+  }
 }));
 
 // 静态文件服务
