@@ -1,0 +1,32 @@
+[
+    {
+        "id": "LWS001F",
+        "sample_id": "",
+        "rock_type": "碎屑岩",
+        "lithology": "细砂岩",
+        "location": "常宁市水口山镇",
+        "coordinates": "112.5915,26.5343",
+        "formation_age": "",
+        "collector": "感同身兽",
+        "collection_date": "2025-10-26",
+        "image": "LWS001F.jpg",
+        "spectrum": "LWS001F.csv",
+        "mineral_composition": "",
+        "description": "1-5cm薄层、中层长石石英细砂岩，鲜切面"
+    },
+    {
+        "id": "LWS001W",
+        "sample_id": "",
+        "rock_type": "碎屑岩",
+        "lithology": "细砂岩",
+        "location": "常宁市水口山镇",
+        "coordinates": "112.5915,26.5343",
+        "formation_age": "",
+        "collector": "感同身兽",
+        "collection_date": "2025-10-26",
+        "image": "LWS001W.jpg",
+        "spectrum": "LWS001W.csv",
+        "mineral_composition": "",
+        "description": "1-5cm薄层、中层长石石英细砂岩，风化面"
+    }
+]
